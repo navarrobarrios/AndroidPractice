@@ -7,7 +7,7 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.TextView;
 
-import com.example.anavrrropc.practicejanb.R;
+import com.example.navarro.androidpractice.R;
 import com.example.navarro.androidpractice.beans.unpersistible.Result;
 
 import java.util.List;

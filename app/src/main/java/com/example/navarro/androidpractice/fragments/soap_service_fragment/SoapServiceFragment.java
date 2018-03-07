@@ -15,7 +15,7 @@ import android.widget.Spinner;
 import android.widget.TextView;
 
 import com.afollestad.materialdialogs.MaterialDialog;
-import com.example.anavrrropc.practicejanb.R;
+import com.example.navarro.androidpractice.R;
 import com.example.navarro.androidpractice.web.managers.SoapServiceManager;
 
 public class SoapServiceFragment extends Fragment implements SoapServiceContract.View{

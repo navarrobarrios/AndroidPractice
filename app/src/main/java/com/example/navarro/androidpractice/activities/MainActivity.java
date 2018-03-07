@@ -7,7 +7,7 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.MenuItem;
 
-import com.example.anavrrropc.practicejanb.R;
+import com.example.navarro.androidpractice.R;
 import com.example.navarro.androidpractice.fragments.firebase_service_fragment.FirebaseServiceFragment;
 import com.example.navarro.androidpractice.fragments.more_options_fragment.MoreOptionsFragment;
 import com.example.navarro.androidpractice.fragments.restful_service_fragment.RestFulServiceFragment;

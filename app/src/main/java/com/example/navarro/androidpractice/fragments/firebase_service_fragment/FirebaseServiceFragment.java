@@ -11,19 +11,27 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.TextView;
 
-import com.example.anavrrropc.practicejanb.R;
-import com.google.zxing.Result;
+import com.example.navarro.androidpractice.R;
+import com.example.navarro.androidpractice.beans.unpersistible.User;
+import com.google.firebase.database.ChildEventListener;
+import com.google.firebase.database.DataSnapshot;
+import com.google.firebase.database.DatabaseError;
+import com.google.firebase.database.DatabaseReference;
+import com.google.firebase.database.FirebaseDatabase;
+import com.google.firebase.database.ValueEventListener;
 
-import me.dm7.barcodescanner.zxing.ZXingScannerView;
-import me.dm7.barcodescanner.zxing.ZXingScannerView.ResultHandler;
+import java.util.ArrayList;
+import java.util.Iterator;
+import java.util.List;
+
 
 public class FirebaseServiceFragment extends Fragment{
 
     //region Variables
     //region Views
-    private Button mScanCode;
-    private EditText mResult;
+    TextView mUsername, mPassword, mName, mLastname, mAge;
     //endregion
     //endregion
 
@@ -49,14 +57,13 @@ public class FirebaseServiceFragment extends Fragment{
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         View view = inflater.inflate(R.layout.fragment_firebase, container, false);
-        mResult = view.findViewById(R.id.fragment_firebase_result);
-        mScanCode = view.findViewById(R.id.fragment_firebase_btn);
-        mScanCode.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
+        mUsername = view.findViewById(R.id.fragment_firebase_username);
+        mPassword = view.findViewById(R.id.fragment_firebase_password);
+        mName = view.findViewById(R.id.fragment_firebase_name);
+        mLastname = view.findViewById(R.id.fragment_firebase_lastname);
+        mAge = view.findViewById(R.id.fragment_firebase_age);
 
-            }
-        });
+        getInformationFromFirebase();
         return view;
     }
 
@@ -74,5 +81,31 @@ public class FirebaseServiceFragment extends Fragment{
     //endregion
 
     //region Local Methods
+    private void getInformationFromFirebase(){
+        FirebaseDatabase.getInstance().goOnline();
+        DatabaseReference mDatabaseReference = FirebaseDatabase.getInstance().getReference("users");
+        mDatabaseReference.addListenerForSingleValueEvent(new ValueEventListener() {
+            @Override
+            public void onDataChange(DataSnapshot dataSnapshot) {
+
+                List<User> userList = new ArrayList<>();
+                for (DataSnapshot postSnapShot: dataSnapshot.getChildren()) {
+                    User user = postSnapShot.getValue(User.class);
+                    userList.add(user);
+                }
+                mName.setText(userList.get(0).getUsername());
+                mPassword.setText(userList.get(0).getPassword());
+                mName.setText(userList.get(0).getName());
+                mLastname.setText(userList.get(0).getLastname());
+                mAge.setText("" + userList.get(0).getAge());
+                FirebaseDatabase.getInstance().goOffline();
+            }
+
+            @Override
+            public void onCancelled(DatabaseError databaseError) {
+
+            }
+        });
+    }
     //endregion
 }

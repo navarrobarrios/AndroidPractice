@@ -6,7 +6,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
-import com.example.anavrrropc.practicejanb.R;
+import com.example.navarro.androidpractice.R;
 
 
 public class MoreOptionsFragment extends Fragment {

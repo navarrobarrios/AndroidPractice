@@ -4,7 +4,7 @@ android {
     compileSdkVersion 26
     buildToolsVersion '26.0.2'
     defaultConfig {
-        applicationId "com.example.anavrrropc.practicejanb"
+        applicationId "com.example.navarro.androidpractice"
         minSdkVersion 15
         targetSdkVersion 26
         versionCode 1
@@ -31,7 +31,7 @@ android {
 
 
 repositories {
-    maven { url 'https://oss.sonatype.org/content/repositories/ksoap2-android-releases/' }
+    maven { url 'https://oss.sonatype.org/content/repositories/ksoap2-android-releases/'}
 }
 
 dependencies {
@@ -40,26 +40,35 @@ dependencies {
         exclude group: 'com.android.support', module: 'support-annotations'
     })
 
+
+    compile 'com.android.support:appcompat-v7:26.1.0'
+    compile 'com.android.support.constraint:constraint-layout:1.0.2'
+    compile 'com.android.support:support-v4:26.1.0'
+    compile 'com.android.support:design:26.1.0'
+
     //region Material Dialog Dependency
+    compile 'com.afollestad.material-dialogs:core:0.9.6.0'
     //endregion
 
     //region Retrofit & Gson Dependencies
+    compile 'com.google.code.gson:gson:2.8.0'
+    compile 'com.squareup.retrofit2:retrofit:2.3.0'
+    compile 'com.squareup.retrofit2:converter-gson:2.2.0'
     //endregion
 
     //region kSoap2 Dependencies
+    compile 'com.google.code.ksoap2-android:ksoap2-android:3.6.2'
     //endregion
 
     //region ZXing
+    compile 'me.dm7.barcodescanner:zxing:1.9.8'
     //endregion
-    compile 'com.android.support:appcompat-v7:26.+'
-    compile 'com.android.support.constraint:constraint-layout:1.0.2'
-    compile 'com.android.support:support-v4:26.+'
-    compile 'com.android.support:design:25.0.0'
-    compile 'com.afollestad.material-dialogs:core:0.9.4.7'
-    compile 'com.google.code.gson:gson:2.7'
-    compile 'com.squareup.retrofit2:retrofit:2.1.0'
-    compile 'com.squareup.retrofit2:converter-gson:2.1.0'
-    compile 'com.google.code.ksoap2-android:ksoap2-android:3.1.1'
-    compile 'me.dm7.barcodescanner:zxing:1.8.4'
+
+    //region Firebase Dependencies
+    compile 'com.google.firebase:firebase-core:11.8.0'
+    compile "com.google.firebase:firebase-database:11.8.0"
+    //endregion
+
     testCompile 'junit:junit:4.12'
 }
+apply plugin: 'com.google.gms.google-services'
