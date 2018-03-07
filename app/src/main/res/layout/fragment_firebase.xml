@@ -1,0 +1,25 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:orientation="vertical"
+    android:layout_height="match_parent"
+    android:layout_margin="24dp"
+    tools:context=".fragments.firebase_service_fragment.FirebaseServiceFragment">
+
+    <EditText
+        android:enabled="false"
+        android:id="@+id/fragment_firebase_result"
+        android:hint="QR code"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+    <Button
+        android:layout_marginTop="24dp"
+        android:id="@+id/fragment_firebase_btn"
+        android:text="QRScanner"
+        android:textColor="#FFFFFF"
+        android:background="@color/colorAccent"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+</LinearLayout>

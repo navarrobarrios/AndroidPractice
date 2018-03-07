@@ -1,0 +1,25 @@
+<resources>
+    <string name="app_name">PracticeJANB</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="title_restful">RestFul</string>
+    <string name="title_soap">Soap</string>
+    <string name="title_firebase">Firebase</string>
+    <string name="title_more">More</string>
+
+    <string-array name="operations_array">
+        <item>Get All Information</item>
+        <item>Get By Code2</item>
+        <item>Get By Code3</item>
+        <item>Get By Any</item>
+    </string-array>
+
+    <string-array name="grades_types_array">
+        <item>Celsius</item>
+        <item>Fahrenheit</item>
+        <item>Rankine</item>
+        <item>Reaumur</item>
+        <item>Kelvin</item>
+    </string-array>
+</resources>

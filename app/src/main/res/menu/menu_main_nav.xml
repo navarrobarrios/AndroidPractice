@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:title="@string/title_restful"
+        android:id="@+id/menu_main_nav_option_one"
+        android:icon="@drawable/ic_developer_mode_black_24dp"
+        />
+    <item
+        android:title="@string/title_soap"
+        android:id="@+id/menu_main_nav_option_two"
+        android:icon="@drawable/ic_developer_mode_black_24dp"
+        />
+    <item
+        android:title="@string/title_firebase"
+        android:id="@+id/menu_main_nav_option_three"
+        android:icon="@drawable/ic_developer_mode_black_24dp"
+        />
+    <item
+        android:title="@string/title_more"
+        android:id="@+id/menu_main_nav_option_four"
+        android:icon="@drawable/ic_list_black_24dp"
+        />
+</menu>
