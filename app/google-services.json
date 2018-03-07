@@ -1,0 +1,42 @@
+{
+  "project_info": {
+    "project_number": "715698126902",
+    "firebase_url": "https://myfirstproject-f51ca.firebaseio.com",
+    "project_id": "myfirstproject-f51ca",
+    "storage_bucket": "myfirstproject-f51ca.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:715698126902:android:f2539451f5e104c6",
+        "android_client_info": {
+          "package_name": "com.example.navarro.androidpractice"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "715698126902-k0avtu95imfav3a2juuss7k0q0avspj0.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAev7-KD9-8GlFjM4g-kFs2ruuqD6wJntQ"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 1,
+          "other_platform_oauth_client": []
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
