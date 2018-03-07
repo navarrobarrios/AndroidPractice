@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<items version="2" >
+
+    <item
+        is-multidex="false"
+        jar="/home/anavrrropc/.gradle/caches/modules-2/files-2.1/net.sourceforge.kobjects/kobjects-j2me/0.0-SNAPSHOT-20040926-2/9246ca92b16c65114a7fb80b906801e06be95305/kobjects-j2me-0.0-SNAPSHOT-20040926-2.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="26.0.1"
+        sha1="9246ca92b16c65114a7fb80b906801e06be95305">
+        <dex dex="/home/anavrrropc/StudioProjects/PassSDK_Sample_v1.2.2/PracticeJANB/app/build/intermediates/pre-dexed/debug/kobjects-j2me-0.0-SNAPSHOT-20040926-2_5a67c3fe3fcf8226d9d6e4ef7edd77a705dcd854.jar" />
+    </item>
+
+</items>
