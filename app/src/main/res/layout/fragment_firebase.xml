@@ -4,7 +4,7 @@
     android:orientation="vertical"
     android:layout_height="match_parent"
     android:layout_margin="24dp"
-    tools:context=".fragments.firebase_service_fragment.FirebaseServiceFragment">
+    tools:context="com.example.navarro.androidpractice.fragments.firebase_service_fragment.FirebaseServiceFragment">
 
     <EditText
         android:enabled="false"

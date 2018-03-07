@@ -6,7 +6,7 @@
     android:orientation="vertical"
     android:layout_marginTop="8dp"
     android:paddingRight="24dp"
-    tools:context="com.example.anavrrropc.practicejanb.fragments.restful_service_fragment.RestFulServiceFragment">
+    tools:context="com.example.navarro.androidpractice.fragments.restful_service_fragment.RestFulServiceFragment">
 
     <EditText
         android:id="@+id/fragment_rest_ful_text_to_search"

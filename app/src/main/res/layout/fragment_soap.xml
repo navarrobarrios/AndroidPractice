@@ -6,7 +6,7 @@
     android:layout_marginTop="12dp"
     android:layout_marginLeft="24dp"
     android:layout_marginRight="24dp"
-    tools:context="com.example.anavrrropc.practicejanb.fragments.soap_service_fragment.SoapServiceFragment">
+    tools:context="com.example.navarro.androidpractice.fragments.soap_service_fragment.SoapServiceFragment">
 
     <LinearLayout
         android:orientation="horizontal"

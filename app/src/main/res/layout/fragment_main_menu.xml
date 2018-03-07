@@ -6,7 +6,7 @@
     android:orientation="vertical"
     android:gravity="center"
     android:layout_marginRight="24dp"
-    tools:context="com.example.anavrrropc.practicejanb.fragments.more_options_fragment.MoreOptionsFragment">
+    tools:context="com.example.navarro.androidpractice.fragments.more_options_fragment.MoreOptionsFragment">
 
     <ImageView
         android:backgroundTint="#50000000"
