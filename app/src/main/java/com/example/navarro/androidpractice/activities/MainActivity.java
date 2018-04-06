@@ -1,5 +1,9 @@
 package com.example.navarro.androidpractice.activities;
 
+import android.app.AlarmManager;
+import android.app.PendingIntent;
+import android.content.Intent;
+import android.os.SystemClock;
 import android.support.annotation.NonNull;
 import android.support.design.widget.BottomNavigationView;
 import android.support.v4.app.Fragment;
@@ -12,7 +16,11 @@ import com.example.navarro.androidpractice.fragments.firebase_service_fragment.F
 import com.example.navarro.androidpractice.fragments.more_options_fragment.MoreOptionsFragment;
 import com.example.navarro.androidpractice.fragments.restful_service_fragment.RestFulServiceFragment;
 import com.example.navarro.androidpractice.fragments.soap_service_fragment.SoapServiceFragment;
+import com.example.navarro.androidpractice.services.BatteryBroadcast;
 import com.example.navarro.androidpractice.utils.ChangeNavigationViewProperties;
+import com.google.firebase.iid.FirebaseInstanceId;
+import com.google.firebase.messaging.FirebaseMessaging;
+import com.google.firebase.messaging.FirebaseMessagingService;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -33,6 +41,21 @@ public class MainActivity extends AppCompatActivity {
         mBottomNavigationView = (BottomNavigationView) findViewById(R.id.main_activity_bottom_navigation_view);
         configureBottomNavigationView();
         prepareFragmentManager();
+
+        Intent intent = new Intent();
+        intent.putExtra("YOLO", "this is a string");
+        intent.setAction("com.example.alarm.notifier");
+        sendBroadcast(intent);
+
+        FirebaseMessaging.getInstance().setAutoInitEnabled(true);
+
+        String token = FirebaseInstanceId.getInstance().getToken();
+        token.equals("");
+
+//        Intent intent = new Intent(this, BatteryBroadcast.class);
+//        PendingIntent pendingIntent = PendingIntent.getBroadcast(this, 001,  intent, PendingIntent.FLAG_CANCEL_CURRENT);
+//        AlarmManager alarmManager = (AlarmManager) getSystemService(ALARM_SERVICE);
+//        alarmManager.setInexactRepeating(AlarmManager.ELAPSED_REALTIME, SystemClock.elapsedRealtime() + 1000, 1000, pendingIntent);
     }
 
     @Override

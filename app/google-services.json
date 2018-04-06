@@ -1,27 +1,27 @@
 {
   "project_info": {
-    "project_number": "715698126902",
-    "firebase_url": "https://myfirstproject-f51ca.firebaseio.com",
-    "project_id": "myfirstproject-f51ca",
-    "storage_bucket": "myfirstproject-f51ca.appspot.com"
+    "project_number": "229682132443",
+    "firebase_url": "https://text-86afc.firebaseio.com",
+    "project_id": "text-86afc",
+    "storage_bucket": "text-86afc.appspot.com"
   },
   "client": [
     {
       "client_info": {
-        "mobilesdk_app_id": "1:715698126902:android:f2539451f5e104c6",
+        "mobilesdk_app_id": "1:229682132443:android:f2539451f5e104c6",
         "android_client_info": {
           "package_name": "com.example.navarro.androidpractice"
         }
       },
       "oauth_client": [
         {
-          "client_id": "715698126902-k0avtu95imfav3a2juuss7k0q0avspj0.apps.googleusercontent.com",
+          "client_id": "229682132443-2bapuqteb2qpdthmnmo3ostlhqcv08t0.apps.googleusercontent.com",
           "client_type": 3
         }
       ],
       "api_key": [
         {
-          "current_key": "AIzaSyAev7-KD9-8GlFjM4g-kFs2ruuqD6wJntQ"
+          "current_key": "AIzaSyBkiu6uw1BAvZl8uYV31YjTWf38rvyd5Us"
         }
       ],
       "services": {
