@@ -7,6 +7,7 @@
     <string name="title_soap">Soap</string>
     <string name="title_firebase">Firebase</string>
     <string name="title_more">More</string>
+    <string name="facebook_app_id">519165505144394</string>
 
     <string-array name="operations_array">
         <item>Get All Information</item>

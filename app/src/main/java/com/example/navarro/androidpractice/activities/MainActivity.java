@@ -18,12 +18,16 @@ import com.example.navarro.androidpractice.fragments.restful_service_fragment.Re
 import com.example.navarro.androidpractice.fragments.soap_service_fragment.SoapServiceFragment;
 import com.example.navarro.androidpractice.services.BatteryBroadcast;
 import com.example.navarro.androidpractice.utils.ChangeNavigationViewProperties;
+import com.facebook.FacebookSdk;
+import com.facebook.appevents.AppEventsLogger;
+import com.facebook.notifications.NotificationsManager;
 import com.google.firebase.iid.FirebaseInstanceId;
 import com.google.firebase.messaging.FirebaseMessaging;
 import com.google.firebase.messaging.FirebaseMessagingService;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.UUID;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -42,20 +46,24 @@ public class MainActivity extends AppCompatActivity {
         configureBottomNavigationView();
         prepareFragmentManager();
 
-        Intent intent = new Intent();
-        intent.putExtra("YOLO", "this is a string");
-        intent.setAction("com.example.alarm.notifier");
-        sendBroadcast(intent);
-
-        FirebaseMessaging.getInstance().setAutoInitEnabled(true);
-
-        String token = FirebaseInstanceId.getInstance().getToken();
-        token.equals("");
+        if (getIntent() != null && getIntent().getExtras() != null){
+            NotificationsManager.presentCard(this, getIntent().getExtras());
+        }
 
 //        Intent intent = new Intent(this, BatteryBroadcast.class);
 //        PendingIntent pendingIntent = PendingIntent.getBroadcast(this, 001,  intent, PendingIntent.FLAG_CANCEL_CURRENT);
 //        AlarmManager alarmManager = (AlarmManager) getSystemService(ALARM_SERVICE);
 //        alarmManager.setInexactRepeating(AlarmManager.ELAPSED_REALTIME, SystemClock.elapsedRealtime() + 1000, 1000, pendingIntent);
+    }
+
+    @Override
+    protected void onPostResume() {
+        super.onPostResume();
+        FacebookSdk.sdkInitialize(this);
+        String refreshedToken = FirebaseInstanceId.getInstance().getToken();
+        AppEventsLogger.setPushNotificationsRegistrationId(refreshedToken);
+        AppEventsLogger.setUserID(UUID.randomUUID().toString());
+        NotificationsManager.presentCardFromNotification(this);
     }
 
     @Override
@@ -69,6 +77,17 @@ public class MainActivity extends AppCompatActivity {
             mBottomNavigationView.getMenu().getItem(mInstances.get(mInstances.size() -1 )).setChecked(true);
         }
     }
+
+    @Override
+    protected void onNewIntent(Intent intent) {
+        super.onNewIntent(intent);
+        setIntent(intent);
+        if (getIntent() != null && getIntent().getExtras() != null){
+            NotificationsManager.presentCard(this, getIntent().getExtras());
+        }
+        NotificationsManager.presentCardFromNotification(this);
+    }
+
     //endregion
 
     //region Local Methods

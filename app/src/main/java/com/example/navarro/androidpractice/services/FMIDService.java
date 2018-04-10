@@ -1,8 +1,6 @@
 package com.example.navarro.androidpractice.services;
 
 import android.util.Log;
-
-import com.facebook.notifications.internal.appevents.AppEventsLogger;
 import com.google.firebase.iid.FirebaseInstanceId;
 import com.google.firebase.iid.FirebaseInstanceIdService;
 
